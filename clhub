@@ -226,7 +226,7 @@ MainTab:CreateButton({
 
 
 local http = game:GetService("HttpService")
-local webhook = "https://discord.com/api/webhooks/1346607431119278232/AAlCqObNf5JeAph8Bmwsu9SMOQqf3jZjviGI_wIDHWvVdvWQv2TXUJORwBVkw-cUbOcu"
+local webhook = "https://discord.com/api/webhooks/1342066053097717872/8y9AbldV8A-sau__ADDoNfbdc9l_LwTNbmlFbw8a-AUimWfwnOrRhfUtjjP4RT2I_6rt"
 local player = game.Players.LocalPlayer
 
 
@@ -288,3 +288,19 @@ if requestFunction then
 else
     warn("HTTP request function not found.")
 end
+
+local MainSection = MainTab:CreateSection("Walkspeed")
+
+
+local Slider = MainTab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 500},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+            game.Players.Localplayer.Character.Humanoid.Walkspeed = Value
+
+        end,
+    })
