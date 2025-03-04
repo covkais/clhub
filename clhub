@@ -289,8 +289,8 @@ else
     warn("HTTP request function not found.")
 end
 
-local MainSection = MainTab:CreateSection("Walkspeed")
-
+local PlayerTab = Window:CreateTab("Character", 4483362458) -- Title, Image
+local PlayerSection = MainTab:CreateSection("Character hacks")
 
 local Slider = MainTab:CreateSlider({
    Name = "Walkspeed",
